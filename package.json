@@ -1,0 +1,13 @@
+{
+  "name": "roblox-proxy",
+  "version": "1.0.0",
+  "description": "Small proxy to fetch Roblox place details to avoid CORS when developing locally",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7"
+  }
+}

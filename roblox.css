@@ -1,0 +1,79 @@
+/* Basic reset */
+* { box-sizing: border-box; }
+html,body { margin:0; padding:0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:#f7f7fb; color:#111; }
+.container { max-width:980px; margin:0 auto; padding:18px; }
+.site-header { background:linear-gradient(90deg,#0ea5e9,#7c3aed); color:#fff; padding:28px 0; margin-bottom:14px; }
+.site-header h1 { margin:0 0 6px; font-size:28px; }
+.tagline { margin:0; opacity:0.95 }
+
+.tabs { display:flex; gap:8px; margin-bottom:16px; }
+.tab-button { background:#fff; border:1px solid #e5e7eb; padding:10px 14px; border-radius:8px; cursor:pointer; transition:all .12s; }
+.tab-button.active { background:#7c3aed; color:#fff; border-color:transparent; box-shadow:0 6px 18px rgba(124,58,237,0.16); }
+.tab-button:focus { outline:2px solid #c7a7ff }
+
+.tab-panel { background:#fff; border:1px solid #e6e6ef; padding:18px; border-radius:10px; }
+.hidden { display:none; }
+
+.game-card { display:flex; gap:18px; align-items:center; }
+.game-info { flex:1 }
+.game-art { width:200px; }
+.meta { list-style:none; padding:0; margin:10px 0 0; display:flex; gap:12px; flex-wrap:wrap }
+.meta li { font-size:14px }
+.card-actions { margin-top:12px; display:flex; gap:8px }
+#play-btn { background:#10b981; color:#fff; border:0; padding:8px 12px; border-radius:8px; cursor:pointer }
+#next-btn { background:#f3f4f6; border:1px solid #e5e7eb; padding:8px 10px; border-radius:8px; cursor:pointer }
+
+.stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-bottom:16px }
+.stat-card { padding:12px; border-radius:8px; background:linear-gradient(180deg,#fff,#fbfbff); border:1px solid #ececff }
+.stat-card h3 { margin:0 0 8px }
+.stat-card p { font-size:20px; margin:0; font-weight:700 }
+
+.top-games { margin-top:6px }
+.small-game { padding:10px; border-radius:8px; border:1px solid #eee; margin-bottom:8px; background:#fff }
+.small-game h4 { margin:0 0 6px }
+.muted { color:#6b7280; font-size:13px }
+.note { margin-top:10px; color:#374151 }
+.note.small { font-size:13px; opacity:0.8 }
+
+.site-footer { text-align:center; padding:12px; margin-top:18px; color:#6b7280 }
+
+@media (max-width:700px) {
+  .game-card { flex-direction:column; }
+  .game-art { width:100%; text-align:center }
+}
+
+/* Video / media area */
+.game-media { display:flex; gap:16px; align-items:flex-start; }
+.video-frame { width:360px; height:215px; border-radius:8px; border:0; }
+.no-video { padding:14px; background:#f3f4f6; border-radius:8px; border:1px solid #e8e8ef; color:#374151 }
+.game-howto { max-width:520px; }
+
+@media (max-width:900px) {
+  .video-frame { width:320px; height:180px; }
+}
+
+@media (max-width:520px) {
+  .game-media { flex-direction:column; }
+  .video-frame { width:100%; height:auto; aspect-ratio:16/9; }
+}
+
+/* Search results / cards */
+.result-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; }
+.result-card { display:flex; gap:10px; padding:10px; border-radius:8px; background:#fff; border:1px solid #eaeaf5; align-items:center; }
+.result-card .thumb { width:88px; height:64px; flex:0 0 88px; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:6px; background:#f3f4f6; }
+.result-card .thumb img { width:100%; height:100%; object-fit:cover; display:block }
+.result-card .card-body { flex:1 }
+.result-card h4 { margin:0 0 6px; font-size:15px }
+.result-card p { margin:0 0 6px }
+.no-thumb { color:#9ca3af; font-size:12px }
+
+.spinner { padding:10px; color:#374151 }
+
+.info-btn { background:#2563eb; color:#fff; border:0; padding:6px 8px; border-radius:6px; cursor:pointer; font-size:13px }
+.wiki-extract { margin-top:8px; color:#374151; font-size:13px; background:#fbfbff; padding:8px; border-radius:6px; border:1px solid #ececff }
+
+/* small responsive adjustment */
+@media (max-width:520px) {
+  .result-card { flex-direction:row; }
+  .result-card .thumb { width:120px; height:84px; }
+}
